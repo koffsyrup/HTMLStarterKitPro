@@ -3,7 +3,7 @@ module.exports = function( grunt ) {
     'use strict';
 
     // Livereload and connect variables
-    var LIVERELOAD_PORT = 35729;
+    var LIVERELOAD_PORT = 35728;
     var lrSnippet = require('connect-livereload')({
         port: LIVERELOAD_PORT
     });
@@ -38,7 +38,7 @@ module.exports = function( grunt ) {
                 },
                 dev: {
                     options: {
-                        port: 8999,
+                        port: 8081,
                         hostname: 'localhost',
                         middleware: function( connect ) {
                             return [lrSnippet, mountFolder(connect, '.')];
@@ -84,7 +84,7 @@ module.exports = function( grunt ) {
             },
             jasmine: {
                 dev: {
-                    src: 'app/viewmodels/*.js',
+                    src: 'app/viewmodels/**/*.js',
                     options: {
                         specs: 'test/specs/dev/**/*spec.js',
                         keepRunner: true,

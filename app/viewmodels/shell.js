@@ -9,7 +9,8 @@
         activate: function () {
             router.map([
                 { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'flickr', moduleId: 'viewmodels/flickr', nav: true }
+                { route: 'flickr', moduleId: 'viewmodels/flickr', nav: true },
+                { route: 'knockout-samples*details', moduleId: 'ko/index', title: 'Knockout Samples',  nav: true, hash: '#knockout-samples' }
             ]).buildNavigationModel();
             
             return router.activate();
